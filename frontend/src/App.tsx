@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 
+
 const teams = [
           {"tid": 159, "cid": 0, "did": 0, "school": "Boston College", "name": "Eagles", "abbrev": "BC", "pop": 161, "city": "Chestnut Hill", "state": "MA", "latitude": 42.330, "longitude": -71.166},
           {"tid": 105, "cid": 0, "did": 0, "school": "Clemson", "name": "Tigers", "abbrev": "CLEM", "pop": 215, "city": "Clemson", "state": "SC", "latitude": 34.678, "longitude": -82.839},
@@ -335,10 +336,8 @@ class Team extends React.Component < {school: string, name: string, city: string
 
     return (
       <div>
-        <h2>{oneTeam.school}</h2>
-        <h2>{oneTeam.name}</h2>
-        <h2>{oneTeam.city}</h2>
-        <h2>{oneTeam.state}</h2>
+        <h2>{oneTeam.school} {oneTeam.name}</h2>
+        <p>{oneTeam.city}, {oneTeam.state}</p>
       </div>
     );
   }
@@ -361,4 +360,4 @@ function App() {
   );
 }
 
-// export default App;
+export default App;
